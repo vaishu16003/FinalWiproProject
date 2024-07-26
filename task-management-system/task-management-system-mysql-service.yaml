@@ -1,3 +1,4 @@
+# Define a 'Service' To Expose mysql to Other Services
 apiVersion: v1
 kind: Service
 metadata:
@@ -6,11 +7,10 @@ metadata:
     app: mysql
     tier: database
 spec:
-  type: NodePort
   ports:
     - port: 3306
       targetPort: 3306
-      nodePort: 30001  # Ensure this port is available and doesn't conflict with other services
   selector:       # mysql Pod Should contain same labels
     app: mysql
     tier: database
+  clusterIP: None  # We Use DNS, Thus ClusterIP is not relevant
