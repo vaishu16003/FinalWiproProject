@@ -49,4 +49,4 @@ spec:
       volumes:
       - name: mysql-persistent-storage # Obtaining 'vloume' from PVC
         persistentVolumeClaim:
-          claimName: mysql-pv-claim 
+          claimName: mysql-pv-claim	  
