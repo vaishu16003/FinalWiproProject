@@ -15,8 +15,7 @@ spec:
       containers:
       - name: task-management-system
         image: vaishu160/task-management-system:latest # Replace with your Docker image name
-        imagePullPolicy: IfNotPresent  
-        
+        imagePullPolicy: IfNotPresent        
         ports:
         - containerPort: 9301  # Port that your Spring Boot application listens on inside the container
         env:   # Setting Enviornmental Variables
@@ -34,20 +33,4 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: db-root-credentials # Name of the 'Secret'
-                key: password   # 'key' inside the Secret which contains required 'value'
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+                key: password   # 'key' inside the Secret which contains required 'value'				
